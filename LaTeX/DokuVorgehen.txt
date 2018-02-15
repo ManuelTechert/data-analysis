@@ -1,0 +1,6 @@
+Laufende Dokumentation des Vorgehens zur Integration in Seminararbeit:
+
+
+- Kommunikation über erstellten Discord-Server
+- Versionsverwaltung über GitHub, eigenes Repository, indem auch Seminararbeit über LaTeX geschrieben wird
+-
