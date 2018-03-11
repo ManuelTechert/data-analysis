@@ -10,6 +10,9 @@ docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearc
 
 docker run -d -p 5601:5601 -h kibana --name kibana --link elasticsearch:elasticsearch kibana
 
+https://artifacts.elastic.co/downloads/logstash/logstash-6.2.2.zip
+	downloaden und entpacken
+
 C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\accidents\uk_accidents_geo.conf
 
 http://localhost:5601/
