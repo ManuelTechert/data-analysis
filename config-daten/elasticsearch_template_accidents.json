@@ -1,5 +1,5 @@
 {
-  "template" : "uk_accidents_geo",
+  "template" : "uk_accidents",
   "mappings" : {
     "_default_" : {
       "_all" : {"enabled" : true, "omit_norms" : true},
