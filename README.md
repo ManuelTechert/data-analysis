@@ -1,22 +1,56 @@
-# data-analysis
+# Datenanalyse über Verkehrsdaten und Unfalldaten in UK Mithilfe von Logstash, Elasticsearch und Kibana
 
+## Daten
 
-Daten von https://www.kaggle.com/silicon99/dft-accident-data
+Daten wurden von folgenden Seiten heruntergeladen:
 
-Anpassungen in den Files:
-	uk_accidents_geo.conf:
+- https://www.kaggle.com/silicon99/dft-accident-data
+- https://www.kaggle.com/sohier/uk-traffic-counts
+
+## Anpassungen
+
+Folgende Zeilen müssen in den Config Files durch den korrekten Pfad angepasst werden
+
+- uk_accidents.conf:
+
 		Zeile 3:     path => "/Users/danie/Downloads/accidents/Accidents0515.csv"
-		Zeile 62:    template => "/Users/danie/Downloads/accidents/elasticsearch-template.json"
 
-docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearch elasticsearch
+		Zeile 62:    template => "/Users/danie/Downloads/accidents/elasticsearch_template_accidents.json"
 
-docker run -d -p 5601:5601 -h kibana --name kibana --link elasticsearch:elasticsearch kibana
+- uk_traffic.conf:
 
-https://artifacts.elastic.co/downloads/logstash/logstash-6.2.2.zip
-	downloaden und entpacken
+		Zeile 3:     path => "/Users/danie/Downloads/traffic/Raw-count-data-major-roads.csv"
 
-C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\accidents\uk_accidents_geo.conf
+		Zeile 60:    template => "/Users/danie/Downloads/traffic/elasticsearch_template_traffic.json"
+
+## Installation
+
+#### Docker
+
+`docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearch elasticsearch`
+
+`docker run -d -p 5601:5601 -h kibana --name kibana --link elasticsearch:elasticsearch kibana`
+
+#### Logstash
+
+Archiv herunterladen und entpacken
+
+- https://artifacts.elastic.co/downloads/logstash/logstash-6.2.2.zip
+
+#### Elasticsearch
+
+`C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\accidents\uk_accidents.conf`
+
+`C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\traffic\uk_traffic.conf`
+
+#### Kibana
 
 http://localhost:5601/
-	Index "uk_accidents_geo" anlegen
-	export.json importieren
+
+- Index `uk_accidents` anlegen
+- Index `uk_traffic` anlegen
+- `export.json` importieren
+
+## Schlusswort
+
+Das Projekt wurde von Daniel Pies, Thomas Pötz und Manuel Techert erstellt.
