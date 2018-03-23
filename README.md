@@ -9,19 +9,19 @@ Daten wurden von folgenden Seiten heruntergeladen:
 
 ## Anpassungen
 
-Folgende Zeilen müssen in den Config Files durch den eigenen Pfad angepasst werden:
+Folgende Zeilen müssen in den Config Files durch den Pfad zum Ordner angepasst werden:
 
 - uk_accidents.conf:
 
-		Zeile 3:     path => "/Users/danie/Downloads/accidents/Accidents0515.csv"
+		Zeile 3:     path => "<Pfad zum Ordner>/accidents/Accidents0515.csv"
 
-		Zeile 62:    template => "/Users/danie/Downloads/accidents/elasticsearch_template_accidents.json"
+		Zeile 62:    template => "<Pfad zum Ordner>/accidents/elasticsearch_template_accidents.json"
 
 - uk_traffic.conf:
 
-		Zeile 3:     path => "/Users/danie/Downloads/traffic/Raw-count-data-major-roads.csv"
+		Zeile 3:     path => "<Pfad zum Ordner>/traffic/Raw-count-data-major-roads.csv"
 
-		Zeile 60:    template => "/Users/danie/Downloads/traffic/elasticsearch_template_traffic.json"
+		Zeile 60:    template => "<Pfad zum Ordner>/traffic/elasticsearch_template_traffic.json"
 
 ## Installation
 
@@ -43,9 +43,9 @@ Archiv herunterladen und entpacken:
 
 Folgende Befehle auf der Konsole ausführen:
 
-- `C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\accidents\uk_accidents.conf`
+- `<Pfad zum Ordner>\logstash-6.2.2\logstash-6.2.2\bin\logstash -f <Pfad zum Ordner>\accidents\uk_accidents.conf`
 
-- `C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\traffic\uk_traffic.conf`
+- `<Pfad zum Ordner>\logstash-6.2.2\logstash-6.2.2\bin\logstash -f <Pfad zum Ordner>\traffic\uk_traffic.conf`
 
 #### Kibana
 
@@ -53,7 +53,7 @@ Im Browser http://localhost:5601/ aufrufen:
 
 - Unter `Index Patterns` Index `uk_accidents` anlegen
 - Unter `Index Patterns` Index `uk_traffic` anlegen
-- Unter `Saved Objects` `export.json` importieren
+- Unter `Saved Objects` `export-kibana.json` importieren
 
 ## Schlusswort
 
