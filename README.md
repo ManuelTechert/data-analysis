@@ -1,4 +1,4 @@
-# Datenanalyse über Verkehrsdaten und Unfallstatistiken in UK Mithilfe von Logstash, Elasticsearch und Kibana
+# Datenanalyse über Verkehrsdaten und Unfallstatistiken in United Kingdom Mithilfe von Logstash, Elasticsearch und Kibana
 
 ## Daten
 
@@ -51,9 +51,9 @@ Folgende Befehle auf der Konsole ausführen:
 
 Im Browser http://localhost:5601/ aufrufen:
 
-- Unter `Index Patterns` Index `uk_accidents` anlegen
-- Unter `Index Patterns` Index `uk_traffic` anlegen
-- Unter `Saved Objects` `export-kibana.json` importieren
+- unter `Index Patterns` Index `uk_accidents` anlegen
+- unter `Index Patterns` Index `uk_traffic` anlegen
+- unter `Saved Objects` `export-kibana.json` importieren
 
 ## Schlusswort
 
