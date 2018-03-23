@@ -1,4 +1,4 @@
-# Datenanalyse über Verkehrsdaten und Unfalldaten in UK Mithilfe von Logstash, Elasticsearch und Kibana
+# Datenanalyse über Verkehrsdaten und Unfallstatistiken in UK Mithilfe von Logstash, Elasticsearch und Kibana
 
 ## Daten
 
@@ -9,7 +9,7 @@ Daten wurden von folgenden Seiten heruntergeladen:
 
 ## Anpassungen
 
-Folgende Zeilen müssen in den Config Files durch den korrekten Pfad angepasst werden
+Folgende Zeilen müssen in den Config Files durch den eigenen Pfad angepasst werden:
 
 - uk_accidents.conf:
 
@@ -27,29 +27,33 @@ Folgende Zeilen müssen in den Config Files durch den korrekten Pfad angepasst w
 
 #### Docker
 
-`docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearch elasticsearch`
+Folgende Befehle auf der Konsole ausführen:
 
-`docker run -d -p 5601:5601 -h kibana --name kibana --link elasticsearch:elasticsearch kibana`
+- `docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearch elasticsearch`
+
+- `docker run -d -p 5601:5601 -h kibana --name kibana --link elasticsearch:elasticsearch kibana`
 
 #### Logstash
 
-Archiv herunterladen und entpacken
+Archiv herunterladen und entpacken:
 
 - https://artifacts.elastic.co/downloads/logstash/logstash-6.2.2.zip
 
 #### Elasticsearch
 
-`C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\accidents\uk_accidents.conf`
+Folgende Befehle auf der Konsole ausführen:
 
-`C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\traffic\uk_traffic.conf`
+- `C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\accidents\uk_accidents.conf`
+
+- `C:\Users\danie\Downloads\logstash-6.2.2\logstash-6.2.2\bin\logstash -f C:\Users\danie\Downloads\traffic\uk_traffic.conf`
 
 #### Kibana
 
-http://localhost:5601/
+Im Browser http://localhost:5601/ aufrufen:
 
-- Index `uk_accidents` anlegen
-- Index `uk_traffic` anlegen
-- `export.json` importieren
+- Unter `Index Patterns` Index `uk_accidents` anlegen
+- Unter `Index Patterns` Index `uk_traffic` anlegen
+- Unter `Saved Objects` `export.json` importieren
 
 ## Schlusswort
 
