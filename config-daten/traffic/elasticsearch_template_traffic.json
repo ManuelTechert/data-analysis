@@ -4,8 +4,7 @@
     "_default_" : {
       "_all" : {"enabled" : true, "omit_norms" : true},
       "properties" : {
-        "@timestamp_traffic": { "type": "date", "doc_values" : true },
-        "@version_traffic": { "type": "string", "index": "not_analyzed", "doc_values" : true },
+        "date_traffic": { "type": "date", "doc_values" : true },
         "geo_location_traffic":{
 	               "properties":{
 	                "location":{"type":"geo_point"}
