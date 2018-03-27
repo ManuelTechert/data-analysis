@@ -5,6 +5,7 @@
       "_all" : {"enabled" : true, "omit_norms" : true},
       "properties" : {
         "Date": { "type": "date", "doc_values" : true },
+        "Time": { "type": "date", "doc_values" : true },
         "geo_location_accidents":{
 	               "properties":{
 	                "location":{"type":"geo_point"}

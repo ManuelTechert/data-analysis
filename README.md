@@ -51,8 +51,8 @@ Folgende Befehle auf der Konsole ausführen:
 
 Im Browser http://localhost:5601/ aufrufen:
 
-- unter `Index Patterns` Index `uk_accidents` anlegen
-- unter `Index Patterns` Index `uk_traffic` anlegen
+- unter `Index Patterns` Index `uk_accidents` ohne Timefilter anlegen
+- unter `Index Patterns` Index `uk_traffic` ohne Timefilter anlegen
 - unter `Saved Objects` `export-kibana.json` importieren
 
 ## Schlusswort
