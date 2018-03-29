@@ -1,4 +1,4 @@
-# Datenanalyse über Verkehrsdaten und Unfallstatistiken in United Kingdom Mithilfe von Logstash, Elasticsearch und Kibana
+# Datenanalyse über Verkehrsdaten und Unfallstatistiken in United Kingdom mithilfe von Logstash, Elasticsearch und Kibana
 
 ## Daten
 
