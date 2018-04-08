@@ -4,12 +4,13 @@
 
 Daten wurden von folgenden Seiten heruntergeladen:
 
-- https://www.kaggle.com/silicon99/dft-accident-data
-- https://www.kaggle.com/sohier/uk-traffic-counts
+- [Unfallstatistiken](https://www.kaggle.com/silicon99/dft-accident-data)
+- [Verkehrsdaten](https://www.kaggle.com/sohier/uk-traffic-counts)
 
 ## Anpassungen
 
-Folgende Zeilen müssen in den Config Files durch den Pfad zum Ordner angepasst werden:
+Logstash akzeptiert nur [absolute Pfade](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-file.html#plugins-inputs-file-path) zu den Daten.
+Aus diesem Grund müssen folgende Zeilen in den Config Files durch den lokalen Pfad zum Ordner angepasst werden:
 
 - uk_accidents.conf:
 
@@ -37,7 +38,7 @@ Folgende Befehle auf der Konsole ausführen:
 
 Archiv herunterladen und entpacken:
 
-- https://artifacts.elastic.co/downloads/logstash/logstash-6.2.2.zip
+- [Logstash 6.2.2](https://artifacts.elastic.co/downloads/logstash/logstash-6.2.2.zip)
 
 #### Elasticsearch
 
