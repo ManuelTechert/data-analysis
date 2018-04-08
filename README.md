@@ -10,7 +10,7 @@ Daten wurden von folgenden Seiten heruntergeladen:
 ## Anpassungen
 
 Logstash akzeptiert nur [absolute Pfade](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-file.html#plugins-inputs-file-path) zu den Daten.
-Aus diesem Grund müssen folgende Zeilen in den Config Files durch den lokalen Pfad zum Ordner angepasst werden:
+Aus diesem Grund müssen folgende Zeilen in den Config Files durch den lokalen Pfad zum Ordner ersetzt werden:
 
 - uk_accidents.conf:
 
